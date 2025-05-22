@@ -1,15 +1,15 @@
-package grupo2.Taller1.config.mapper;
+package grupo2.Taller1.mapper;
 
 
-import grupo2.Taller1.config.dto.ProductDto;
-import grupo2.Taller1.config.model.Product;
+import grupo2.Taller1.dto.ProductDto;
+import grupo2.Taller1.model.Product;
 
 import java.util.List;
 
 public interface ProductMapper {
 
     static ProductDto modelToDto(Product product) {
-        return grupo2.Taller1.config.dto.ProductDto.builder()
+        return ProductDto.builder()
                 .id(product.getId())
                 .title(product.getTitle())
                 .price(product.getPrice())
@@ -20,7 +20,7 @@ public interface ProductMapper {
     }
 
 
-    static Product dtoToModel(grupo2.Taller1.config.dto.ProductDto dto) {
+    static Product dtoToModel(ProductDto dto) {
         return Product.builder()
                 .id(dto.getId())
                 .title(dto.getTitle())
