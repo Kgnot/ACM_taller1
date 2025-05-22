@@ -1,4 +1,4 @@
-package grupo2.Taller1.product;
+package grupo2.Taller1.service;
 
 import grupo2.Taller1.dto.ProductDto;
 import grupo2.Taller1.mapper.ProductMapper;
@@ -18,18 +18,17 @@ public class ProductServiceImpl implements IProductService {
     private final RestTemplate restTemplate;
 
     @Override
-    public List<ProductDto> findAll() {
+    public List<Product> findAll() {
 
-        Product[] productList =
-                restTemplate.getForObject("/products", Product[].class);
-        if(productList == null)
-        {
+        ProductDto[] stockDto =
+                restTemplate.getForObject("/products", ProductDto[].class);
+        if (stockDto == null) {
             return List.of();
         }
-        List<ProductDto> productDto = ProductMapper.modelToDtoList(List.of(productList));
+        List<Product> stock = ProductMapper.dtoToModel(List.of(stockDto));
 
-        log.info("Product list size: {}", productDto.size()); // no ponemos tdo porque bueno, xd
+        log.info("Product list size: {}", stock.size()); // no ponemos tdo porque bueno, xd
 
-        return productDto.isEmpty() ? List.of() : productDto;
+        return stockDto.length == 0 ? List.of() : stock;
     }
 }
