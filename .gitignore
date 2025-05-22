@@ -1,0 +1,63 @@
+# Ignorar archivos generados por el IDE
+/.idea/
+/*.iml
+/*.ipr
+/*.iws
+/.settings/
+/.project
+/.classpath
+/.factorypath
+/.springBeans
+
+# Ignorar archivos de compilación y ejecución
+/target/
+/bin/
+/build/
+/out/
+*.jar
+*.war
+*.ear
+*.nar
+
+# Ignorar logs y archivos temporales
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignorar archivos de configuración local
+*.properties
+*.yml
+!application.yml
+!application.properties
+!bootstrap.yml
+!bootstrap.properties
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias de Node (si usas frontend con Spring Boot)
+/node_modules/
+
+# Ignorar archivos de desarrollo frontend (si aplica)
+/dist/
+/src/main/resources/static/built/
+
+# Ignorar archivos de cobertura de pruebas
+/jacoco.exec
+/jacoco-data/
+*.jacoco
+.coverage
+
+# Ignorar archivos de Docker (si no se versionan)
+/docker-compose.yml
+/docker-build/
+
+# Ignorar archivos de configuración personalizados
+/config/application-*.yml
+/config/application-*.properties
+
+# Ignorar archivos generados por el sistema operativo
+*.orig
+*~
