@@ -1,7 +1,7 @@
 package grupo2.Taller1.controller;
 
 
-import grupo2.Taller1.product.IProductService;
+import grupo2.Taller1.service.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
