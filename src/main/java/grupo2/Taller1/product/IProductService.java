@@ -1,8 +1,8 @@
-package grupo2.Taller1.config.service.product;
+package grupo2.Taller1.product;
 
 
 
-import grupo2.Taller1.config.dto.ProductDto;
+import grupo2.Taller1.dto.ProductDto;
 
 import java.util.List;
 
