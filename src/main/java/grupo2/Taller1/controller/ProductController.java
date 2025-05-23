@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final IProductService productService;
+    private final IProductService productService; // lo estoy inyectando
 
 
     @GetMapping
     public String getProducts(Model model) {
-        model.addAttribute("products", productService.findAll());
+        model.addAttribute("products", productService.findAll()); // localstorage -> products : list<Products>
 
         return "products";
     }

@@ -2,7 +2,6 @@ package grupo2.Taller1.model;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -15,4 +14,5 @@ import org.springframework.stereotype.Component;
 public class User {
 
     private Long id;
+    private Token token;
 }

@@ -6,9 +6,10 @@ import grupo2.Taller1.model.Product;
 
 import java.util.List;
 
-public interface ProductMapper {
+public class ProductMapper {
 
     static ProductDto modelToDto(Product product) {
+
         return ProductDto.builder()
                 .id(product.getId())
                 .title(product.getTitle())
@@ -20,7 +21,7 @@ public interface ProductMapper {
     }
 
 
-    static Product dtoToModel(ProductDto dto) {
+    public static Product dtoToModel(ProductDto dto) {
         return Product.builder()
                 .id(dto.getId())
                 .title(dto.getTitle())
@@ -33,13 +34,13 @@ public interface ProductMapper {
 
     // Los métodos para listas:
 
-    static List<ProductDto> modelToDtoList(List<Product> products) {
+    public static List<ProductDto> modelToDtoList(List<Product> products) {
         return products.stream()
                 .map(ProductMapper::modelToDto)
                 .toList();
     }
 
-    static List<Product> dtoToModel(List<ProductDto> dtos) {
+    public static List<Product> dtoToModelList(List<ProductDto> dtos) {
         return dtos.stream()
                 .map(ProductMapper::dtoToModel)
                 .toList();

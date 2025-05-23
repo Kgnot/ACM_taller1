@@ -6,11 +6,11 @@ import lombok.Data;
 
 @Data
 @Builder
-public class ProductDto {
+public final class ProductDto {
 
-    private String id;
+    private Integer id;
     private String title;
-    private String price;
+    private Float price;
     private String description;
     private String category;
     private String image;

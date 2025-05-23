@@ -5,6 +5,7 @@ import grupo2.Taller1.mapper.ProductMapper;
 import grupo2.Taller1.model.Product;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -22,10 +23,11 @@ public class ProductServiceImpl implements IProductService {
 
         ProductDto[] stockDto =
                 restTemplate.getForObject("/products", ProductDto[].class);
+
         if (stockDto == null) {
             return List.of();
         }
-        List<Product> stock = ProductMapper.dtoToModel(List.of(stockDto));
+        List<Product> stock = ProductMapper.dtoToModelList(List.of(stockDto));
 
         log.info("Product list size: {}", stock.size()); // no ponemos tdo porque bueno, xd
 
