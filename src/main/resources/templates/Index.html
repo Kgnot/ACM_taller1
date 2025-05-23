@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FHN Store - Inicia Sesión </title>
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+        <!-- Logo/Brand -->
+        <div class="nav-brand">
+            <h1>FakeAPI</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="/productos" class="nav-link active">Productos</a>
+            <a href="/carrito" class="nav-link">Carrito</a>
+        </nav>
+
+        <!-- User Actions -->
+        <div class="nav-actions">
+            <a href="/logout" class="logout-btn">Cerrar Sesión</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+  <form action="/products" method="post">
+    <fieldset>
+      <legend>A ver si puedes comprar</legend>
+
+      <label for="username-input">Username:</label>
+      <input type="text" id="username-input" name="username" placeholder="Ingresa tu Usuario"   title="No." required>
+      <br>
+
+      <label for="password-input">Password:</label>
+      <input type="password" id="password-input" name="password-input" minlength="8" maxlength="20" placeholder="C14v3*%" required>
+      <br>
+    </fieldset>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar mi respuesta</button>
+  </form>
+
+</main>
+
+
+  
+</body>
+</html>
