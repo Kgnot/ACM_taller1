@@ -1,4 +1,4 @@
-package grupo2.Taller1.model;
+package grupo2.Taller1.mapper;
 
 import com.example.dto.CartResponseDto;
 import com.example.dto.CartProductDto;
