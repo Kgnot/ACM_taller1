@@ -1,4 +1,4 @@
-package grupo2.Taller1.model;
+package grupo2.Taller1.dto;
 
 import java.time.LocalDateTime;
 import java.util.List;
