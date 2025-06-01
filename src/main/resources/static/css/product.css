@@ -291,6 +291,26 @@ body {
     flex: 1;
 }
 
+/* ===== Login de Pipe ===== */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form.login {
+    width: 85vw;
+
+    &>fieldset {
+        width: 100%;
+    }
+    & button {
+        width: 15%;
+    }
+}
+
 /* ===== SCROLLBAR PERSONALIZADO ===== */
 .descriptionText::-webkit-scrollbar {
     width: 4px;

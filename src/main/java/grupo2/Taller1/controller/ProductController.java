@@ -22,10 +22,7 @@ public class ProductController {
 
     @GetMapping
     public String getProducts(Model model) {
-        // Hacemos una comprobacion del perfil antes de redirigir, podría
-        // ser creada median aop y una anotación , o en algo un poco más avanzado
-        // mediante una cadena de filtros
-        if(!token.isPresent()) return "error/errorUser";
+
 
 
         model.addAttribute("products", productService.findAll()); // localstorage -> products : list<Products>
